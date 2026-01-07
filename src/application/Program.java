@@ -11,14 +11,11 @@ import java.util.Date;
 public class Program {
     static void main() {
 
-        Department obg = new Department(1,"Books");
-        System.out.println(obg);
+    SellerDao sellerDao = DaoFactory.createSellerDao();
+    Seller seller = sellerDao.findById(7);
 
-    Seller seller = new Seller(1,"Bob","sla@gmail.com",new Date(),900.0,obg);
         System.out.println(seller);
 
-        SellerDao sellerDao = DaoFactory.createSellerDao();
-        
 
     }
 
